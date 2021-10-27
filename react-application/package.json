@@ -1,0 +1,14 @@
+{
+    "name": "replace_name",
+    "version": "1.0.0",
+    "description": "",
+    "keywords": [
+        "Application",
+        "React",
+        "Redux",
+        "@uteamjs"
+    ],
+    "author": "u.team",
+    "license": "MIT",
+    "dependencies": {}
+}

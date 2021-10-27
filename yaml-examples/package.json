@@ -1,0 +1,14 @@
+{
+    "name": "replace_name",
+    "version": "1.0.0",
+    "description": "@uteamjs/react example for YAML generation",
+    "keywords": [
+      "Package",
+      "YAML",
+      "React",
+      "@uteamjs"
+    ],
+    "author": "u.team",
+    "license": "MIT"
+
+  }

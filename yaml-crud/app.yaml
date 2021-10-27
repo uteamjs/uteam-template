@@ -1,0 +1,84 @@
+header:
+  name: __package__ 
+  template: "@uteamjs/template/react-redux"
+  
+  src: src              #Output directory
+  
+  # Index Template
+  module: __module__    # Module name
+  index: index.js       # Index file name
+  
+  # Route Setting
+  routeName: __routename__   
+  routePath: __routepath__
+  defaultPath: contact
+
+  route:
+    - detail/:id?: detail
+  
+  menu:
+    - Contact List: contact
+
+contact:
+  - exports
+  - Columns:
+    - Fields:
+        - Search:
+          labelPosition: top
+          onChange: |
+              params => e =>  {
+                  this.gridapi.setQuickFilter(e.target.value)
+                  this.onChange(params)(e)
+              }
+    - Buttons:
+      - Create:
+        href: '#/__routepath__/detail'
+      - Delete:
+        variant: danger
+        click: >
+          () => call('delete', this.gridapi.getSelectedNodes())
+
+  - Grid:
+      props:
+        checkbox: true
+        resize: true
+        fit: true
+
+      col:
+        - label: id
+          hide: true
+        - label: Name
+          route: __routepath__/detail
+          params:
+            - id
+        - Email
+        - Gender
+      row:
+        - 12345, Peter, peter@gmail.com, Male
+        - 23454, Kate, kate@yahoo.com, Female
+
+detail:
+  - exports
+  - Fields:
+    - Id:
+      hide: true
+    - Name:
+    - Email:
+    - Gender:
+      tp: 'radio'
+      list:
+        - Male
+        - Female
+  
+  - Buttons:
+      - Cancel:
+        click: >
+          () => this.props.history.goBack()
+      - Save:
+        click: >
+          () => {
+            call('__routepath__/contact/add', %_fields%)
+            this.props.history.goBack()
+          }
+        
+    

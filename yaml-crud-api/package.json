@@ -1,0 +1,13 @@
+{
+  "name": "replace_name",
+  "version": "1.0.0",
+  "description": "@uteamjs/react for YAML CRUD with backend API",
+  "keywords": [
+    "Package",
+    "YAML",
+    "React",
+    "@uteamjs"
+  ],
+  "author": "U Team, Inc.",
+  "license": "MIT"
+}

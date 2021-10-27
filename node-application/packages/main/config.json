@@ -1,0 +1,20 @@
+{
+    "name": "main",
+    "address": "0.0.0.0",
+    "port": 8000,
+    "socket": false,
+    "db":  {
+        "type": "sqlite",
+        "file": ":memory:"
+    },
+    "localModule": ["system"],
+    "header": {
+        "Access-Control-Allow-Origin": "http://localhost:3000",
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "Content-Type, token"
+    },
+    "jwt": {
+        "disable": true,
+        "secretOrKey": "chr0n0"
+    }
+}

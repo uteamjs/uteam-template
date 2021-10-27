@@ -1,0 +1,13 @@
+{
+    "name": "main",
+    "version": "1.0.0",
+    "description": "@uteamjs/node applicatin main",
+    "keywords": [
+        "Main",
+        "uteam",
+        "nodejs",
+        "api"
+    ],
+    "author": "u.team",
+    "dependencies": {}
+}

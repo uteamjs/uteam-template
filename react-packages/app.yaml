@@ -1,0 +1,41 @@
+header:
+  name: __package__      # Package Name displayed in main-menu bar 
+  template: "@uteamjs/template/react-redux"
+  #individual: true      # Generate individual file
+  
+  src: src               # Output directory for js file
+  
+  # Index Template
+  module: __module__      
+  index: index.js        # Index file name
+  
+  routeName: __routename__   
+  routePath: __routepath__
+  defaultPath: introduction       
+  
+  # Tree Menu for application
+  menu:
+    - Introduction: introduction 
+    - Pages:
+        - 'Hello World': helloworld     
+
+# First component page
+introduction:
+  #- generate 
+  - h1: Introduction
+  - h4: Welcome to u.team 
+  - p: |
+      To modify this page, 
+      edit the app.yaml in corresponding packages
+    
+
+# Second component page
+helloworld:
+  - h1: Hello World
+  - Fields:
+    - Age
+    - Name Please: Peter
+      id: name
+      
+  - div: You name is %name%
+

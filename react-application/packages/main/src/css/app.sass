@@ -1,0 +1,110 @@
+@mixin center
+    max-width: 1024px
+    margin: auto
+
+html, body
+    height: 100%
+
+// Top Menu Bar
+.main-menu
+    position: fixed
+    top: 0
+    background-color: white
+    box-shadow: rgba(99, 99, 99, 0.3) 0 0 10px 0px
+    width: 100%
+    z-index: 100
+
+    > div
+        @include center
+        display: flex
+
+        > .hamberger
+            display: none
+            margin: 8px
+            margin-bottom: 0
+
+            @media screen and (max-width: 768px)
+                display: block
+
+        > .hamberger:hover, .hamberger.clicked
+            color: #fd56b8
+
+        img
+            margin: 8px
+            width: 109px
+
+            @media screen and (max-width: 768px)
+                width: 82px
+                margin-top: 5px
+                margin-left: 0px
+            
+        > .items
+            overflow-x: auto
+            padding-top: 20px
+            white-space: nowrap
+
+            > a
+                padding: 0px  15px
+
+            .active
+                color: #fd56b8
+
+            @media screen and (max-width: 768px)
+                padding-top: 10px
+
+        > .items::-webkit-scrollbar
+            display: none
+
+.content
+    @include center
+    display: flex
+
+    // Tree menu
+    > .tree-menu
+        background-color: white
+        width: 16%
+        padding: 10px
+        min-width: 120px
+        box-shadow: rgba(99, 99, 99, 0.1) 6px 0 8px 0px
+  
+        .active
+            color: #fd56b8
+
+        .sub-menu
+            padding-left: 15px
+
+        .toggle
+            cursor: default
+
+        a, .toggle
+            display: block
+            padding: 5px 0
+    
+    > .tree-menu.show
+        display: block
+        min-width: 180px
+        z-index: 10
+
+    // Content Page
+    > .page
+        flex: 1
+        
+        // Cancel out the -15px left right margin set in bootstrap
+        padding: 15px     
+
+    > .page::-webkit-scrollbar
+        display: none
+
+    > .tree-menu, .page
+        height: 100vh
+        overflow-y: auto
+        padding-top: 65px
+
+    @media screen and (max-width: 768px)
+        // Overlay on Page
+        > .tree-menu
+            display: none
+            position: fixed
+
+        > .tree-menu, .page
+            padding-top: 50px

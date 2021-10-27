@@ -1,0 +1,15 @@
+{
+    "name": "@uteamjs/template",
+    "version": "1.0.0",
+    "description": "Template for creation and generation of @uteamjs application",
+    "keywords": [
+        "Template",
+        "YAML",
+        "React",
+        "Redux",
+        "Nodejs",
+        "Express"
+    ],
+    "author": "u.team",
+    "license": "MIT"
+}

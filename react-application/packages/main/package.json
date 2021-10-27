@@ -1,0 +1,19 @@
+{
+    "name": "main",
+    "author": "u.team",
+    "keywords": [
+      "Main",
+      "uteam",
+      "react",
+      "redux"
+    ],
+    "license": "MIT",
+    "version": "1.0.0",
+    "description": "Template for @uteamjs/react",
+    "scripts": {
+      "start": "webpack serve --config config/webpack.local.js",
+      "build": "NODE_ENV=production webpack --config config/webpack.prod.js",
+      "version": "webpack --version"
+    },
+    "dependencies": {}
+  }

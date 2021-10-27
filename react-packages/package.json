@@ -1,0 +1,13 @@
+{
+  "name": "replace_name",
+    "version": "1.0.0",
+    "description": "Package template for @uteamjs/react",
+    "keywords": [
+      "Package",
+      "React",
+      "Redux",
+      "@uteamjs"
+    ],
+    "author": "u.team",
+    "license": "MIT"
+  }

@@ -1,0 +1,210 @@
+header:
+  name: __package__ 
+  template: "@uteamjs/template/react-redux"
+  src: src               #Output directory
+  
+  module: __module__    # Module name
+  index: index.js       # Index file name
+  
+  routeName: __routename__   
+  routePath: __routepath__
+  defaultPath: overview    
+  
+  route:                # route to be generated
+    - griddetail/:id?: griddetail
+    - pagepopup
+
+  menu:
+    - Overview: overview
+    - Hello World: helloworld
+    - Fields: fields
+    - Section: section
+    - Tab: tab
+    - Grid: grid
+    - HTML: html
+    - Modal: modal
+    - Button: button
+
+overview:
+  - h1: overview
+  - p: |
+      This example is used to illustrate the generation of 
+      different types of JSX component using YAML 
+  - a: 
+      text: The full examples are in 'app.yaml' with less then 200 lines
+      href: https://example.u.team/#/yaml/yamlFile
+      target: _blank
+  - hr:
+  - h5: YAML Tutorial
+  - a: 
+      text: Click here for YAML tutorial
+      href: https://u.team/document/yaml/overview
+      target: _blank
+
+helloworld:
+  - h1: Hello World
+  - Fields:
+    - Age
+    - Name Please: Peter
+      id: name
+      
+  - div: You name is %name%
+
+html:
+  - a: Hello
+    href: '/'       # Properties not indented
+  - hr:
+  - a:  
+      text: World   # text: added when properties are indented
+      href: '/'
+  - div:
+    - props:
+        class: doom 
+    
+    - a: PPP
+          
+    - Fields:
+        - Create:
+
+fields: 
+  - Fields:
+    - Address: Great Russell St, London, WC1B 3DG
+    - Date: 26 July 2024
+      tp: datepicker
+
+  - Columns:
+    - Fields:
+      - Note:
+        tp: 'textarea'
+
+    - Fields:
+      - Customer: 1234567
+        readOnly: true
+      - Select Drinks:
+        tp: select
+        list:
+          - Milk
+          - Coffee
+          - Orange Juice
+
+section:
+  - h4: Section Example
+  - Section:
+    - props:
+        title: Customer Details
+        icon: FcCustomerSupport
+
+    - Columns:
+      - Fields:
+        - Last Name: Thomson
+        - First Name: John
+      
+      - Fields:
+        - Birtday:
+        - Custemer No:
+
+  - p: Fields outside sections
+  
+  - Fields:
+      - Preference:
+        tp: checkbox
+        list:
+            - No sugar
+            - No ice
+            - No straw
+
+  - Section:
+      - props:
+          title: Report
+          isCollapse: false
+          isEdit: true
+          isSave: false
+          backgroundColor: white  
+      
+      - Fields:
+        - Note:
+
+      - p: Note - Section without Icon, Save & Collapse
+
+tab:
+  - Tabs:
+    - Address:
+      - Fields:
+        - Work:
+
+    - Contact:
+      - Fields:
+        - Mobile:
+        - Telephone:
+
+grid:
+  - Grid:
+      col:
+        - label: Order No.
+          filter: agTextColumnFilter
+          route: __routepath__/griddetail
+
+        - Order Date
+        - Order Value
+
+      row:
+        - MO20200100123, 26 Jul 2024, 210
+        - MO20210200012, 11 Aug 2024, 350
+        - MO20210500031, 6 Feb 2026, 480
+
+griddetail:
+  - generate
+  - h4: Detail page with id %params.id%
+
+button:    
+  - h4: Buttons Group
+  - Fields:
+      - Name:
+  - Buttons:
+      - Save:
+        save: _.fields
+      - Link:
+        target: '_blank'
+        href: https://u.team
+  - Buttons:
+      - props:
+          left:
+      - Dummy
+      - Alert:
+        variant: danger
+        click: () => alert('Hello World') 
+
+modal:
+  - h4: Popup Up/Modal with init and return value
+  - Buttons:
+    - Enter Name:
+      pop: 
+        form: pagepopup
+        title: Call by parent Modal
+        update:
+          _inputname: name
+
+  - p: Your name is %_inputname%
+
+pagepopup:    
+  - Fields: 
+    - Name:
+
+  - Buttons:
+    - Done:
+      return: name
+
+
+
+  
+
+
+    
+
+
+ 
+  
+
+  
+
+  

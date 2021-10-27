@@ -2,6 +2,10 @@
     "name": "@uteamjs/template",
     "version": "1.0.0",
     "description": "Template for creation and generation of @uteamjs application",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/uteamjs/uteam-template.git"
+    },
     "keywords": [
         "Template",
         "YAML",
@@ -11,5 +15,9 @@
         "Express"
     ],
     "author": "u.team",
-    "license": "MIT"
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/uteamjs/uteam-template.git/issues"
+    },
+    "homepage": "https://u.team"
 }

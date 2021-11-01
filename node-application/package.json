@@ -10,5 +10,8 @@
     ],
     "author": "u.team",
     "license": "MIT",
-    "dependencies": {}
+    "dependencies": {
+        "@uteamjs/node": "*",
+        "sqlite3": "^4.2.0"
+    }
 }

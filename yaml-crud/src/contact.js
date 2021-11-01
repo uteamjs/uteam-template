@@ -2,7 +2,7 @@ import { utCreateElement, utReducer, merge } from '@uteamjs/react'
 import { _layout, _reducer } from './contact_export'
 import { findIndex, uniqueId, each } from 'lodash'
 
-const reducer = utReducer('yaml-tutorial/contact',
+const reducer = utReducer('crud/contact',
     merge(_reducer, {
         actions: {
             delete: (_, rows) => {

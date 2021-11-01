@@ -3,7 +3,7 @@ import { _layout, _reducer } from './detail_export'
 import { each } from 'lodash'
 
 
-const reducer = utReducer('yaml-tutorial/detail',
+const reducer = utReducer('crud/detail',
     merge(_reducer, {
         actions: {
             load: (_, data) => {
@@ -21,7 +21,7 @@ class layout extends _layout {
         const { id } = match.params
         
         if (id) {
-            const data = store.getState()['yaml-tutorial/contact']
+            const data = store.getState()['crud/contact']
             const row = data?._.rows.find(t => t.id === id)
             if(row)
                 props.call('load', row)

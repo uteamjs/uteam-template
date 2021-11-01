@@ -2,7 +2,6 @@ const paths = require('./paths')
 const Dotenv = require('dotenv-webpack')
 const { merge } = require('webpack-merge')
 const common = require('./webpack.common.js')
-const webpack = require('webpack')
 
 module.exports = merge(common, {
   // Set the mode to development or production
@@ -10,11 +9,6 @@ module.exports = merge(common, {
 
   // Control how source maps are generated
   devtool: 'inline-source-map',
-
-  /*
-  output: {
-    publicPath: '/',
-  },*/
 
   // Spin up a server for quick development
   devServer: {
@@ -31,7 +25,6 @@ module.exports = merge(common, {
   plugins: [
     new Dotenv({
       path: './config/.env.local',    //User in remoteAction/fetch
-    }),
-    //new webpack.HotModuleReplacementPlugin()
+    })
   ]
 })

@@ -12,5 +12,7 @@ exports.add = sqlseries((db, payload) => [
 ])
 
 exports.delete = sqlseries((db, payload) => [
-    db.query('delete from contact where id in (?)', [payload.toString])
-])
+    callback => eachSeries(payload, (item, cb) =>
+        db.queryParam('delete from contact where id = ?', item)(cb)
+    , callback)
+ ])

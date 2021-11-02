@@ -12,6 +12,6 @@
     "license": "MIT",
     "dependencies": {
         "@uteamjs/node": "*",
-        "sqlite3": "^4.2.0"
+        "sqlite3": "*"
     }
 }

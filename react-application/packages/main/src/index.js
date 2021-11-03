@@ -14,6 +14,8 @@ import { HashRouter as Router, NavLink } from 'react-router-dom'
 import { RouterStore, SwitchRoute } from '@uteamjs/react'
 import { FiMenu } from 'react-icons/fi'
 import { treeMenu } from "./treemenu"
+import { treeMenu } from "./treemenu"
+import { ToastContainer } from 'react-toastify'
 import './css/app.sass'
 
 // 1. Import generated packages
@@ -76,7 +78,7 @@ const App = () => {
             </Router>
         </div>
         <LogoMenu isShow={isShow} toggle={toggle} />
-
+        <ToastContainer position="bottom-right"/>
 
     </RouterStore >
 }

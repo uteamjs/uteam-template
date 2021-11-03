@@ -1,4 +1,5 @@
 const { sqlseries, capitalize } = require('@uteamjs/node')
+const { eachSeries } = require('async')
 
 exports.load = sqlseries((db, data) => [
     db.query('select * from contact', rows => {
@@ -14,5 +15,5 @@ exports.add = sqlseries((db, payload) => [
 exports.delete = sqlseries((db, payload) => [
     callback => eachSeries(payload, (item, cb) =>
         db.queryParam('delete from contact where id = ?', item)(cb)
-    , callback)
- ])
+        , callback)
+])

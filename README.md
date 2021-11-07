@@ -60,7 +60,7 @@ Each package has its own tree menu which can be customized through the [app.yaml
 ## react-redux
 There are four template files used for YAML generation of JSX code:
 
-__modules.js__ - An index file for exporting all the components in the package.
+- **modules.js** - An index file for exporting all the components in the package.
 ```jsx
 import { lazy } from 'react'
  
@@ -70,8 +70,8 @@ import { lazy } from 'react'
 Note: The /* … */ comment statements are insertion points for code generation. Please do not delete or change the statement.
 
 When exports switch enabled in YAML, the following pair of files are being used:
-__init.js__ - File for user to insert custom code.
-__exports.js__ - File for generation of _reducer object and _layout class to be exported.
+- **init.js** - File for user to insert custom code.
+- **exports.js** - File for generation of _reducer object and _layout class to be exported.
 
 Otherwise use the following file:
 __page.js__ - File for creating single page components.
@@ -144,7 +144,7 @@ Backend package to handle CRUD requests from the yaml-crud-api frontend. Run the
 ```
 $ uteam create -p crud-api -t node-crud-api
 ```
-Note: --generation option is not required for backend application.
+Note: **--generation** option is not required for backend application.
 
 Please refer to the [CRUD API tutorial](https://u.team/document/tutorial/crudapi) for a full explanation.
 
@@ -154,3 +154,6 @@ Since the **@uteamjs/template** is installed in the npm global folder, it is har
 $ uteam template --update
 ```
 Note: **npm update -g uteam** may be update the **@uteamjs/template**.
+
+# License
+[MIT](LICENSE)

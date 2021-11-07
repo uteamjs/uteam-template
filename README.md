@@ -1,5 +1,5 @@
 # @uteamjs/template
-[@uteamjs/template](https://u.team/document/template) bootstrap the creation of **React-Redux** & __Node.js__ application and packages by providing the following templates:
+[@uteamjs/template](https://u.team/document/template) bootstrap the creation of **React-Redux & __Node.js__ application and packages by providing the following templates:
 - React & Node.js Application template for use in [uteam create application](https://u.team/document/cli#create)
 - React Package template for use in [uteam create packages](https://u.team/document/cli#create)
 - Example templates for use in [Tutorial section](https://u.team/document/tutorial/helloworld)
@@ -124,7 +124,9 @@ A full example with the following features:
 - Support co-exist of YAML and JSX code
 - Add-on JSX code will not be overwritten in re-generation
 
-Run the follow command to add to your application:
+Please refer to the [YAML CRUD tutorial](https://u.team/document/tutorial/crud) for a full explanation.
+
+Run the follow command to add **yaml-crud** package to your application:
 ```
 $ uteam create -p crud -t yaml-crud -g
 ```
@@ -134,7 +136,7 @@ Similar to the yaml-crud except the CRUD action will be fetched to the backend A
 
 ![CRUD api](https://u.team/assets/img/kix.z7pqrddqn169.png)
 
-For frontend package, run the following command to add to your application:
+For frontend package, run the following command to add **crud-api** package to your application:
 ```
 $ uteam create -p crud-api -t yaml-crud-api -g
 ```
@@ -145,10 +147,11 @@ $ uteam create -p crud-api -t node-crud-api
 ```
 Note: --generation option is not required for backend application.
 
+Please refer to the [CRUD API tutorial](https://u.team/document/tutorial/crudapi) for a full explanation.
 
 ## Template Update
-Since the @uteamjs/template is installed in the npm global folder, it is hard to locate the directory for updating.  The update process is executed through the uteam cli as follows:
+Since the **@uteamjs/template** is installed in the npm global folder, it is hard to locate the directory for updating.  The update process is executed through the **uteam cli** as follows:
 ```
 $ uteam template --update
 ```
-Note: npm update -g uteam may be update the @uteamjs/template.
+Note: **npm update -g uteam** may be update the **@uteamjs/template**.

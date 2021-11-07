@@ -1,6 +1,6 @@
 {
     "name": "@uteamjs/template",
-    "version": "1.0.15",
+    "version": "1.0.16",
     "description": "Template for creation and generation of @uteamjs application",
     "repository": {
         "type": "git",

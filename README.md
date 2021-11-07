@@ -1,9 +1,9 @@
 # @uteamjs/template
 __@uteamjs/template__ bootstrap the creation of React-Redux & Node.js application and packages by providing the following templates:
-- React & Node.js Application template for use in uteam create application
-- React Package template for use in uteam create packages
-- Example templates for use in Tutorial section
-- Individual file template for YAML uteam generation
+- React & Node.js Application template for use in [uteam create application](https://u.team/document/cli#create)
+- React Package template for use in [uteam create packages](https://u.team/document/cli#create)
+- Example templates for use in [Tutorial section](https://u.team/document/tutorial/helloworld)
+- Individual file template for [YAML uteam generation](https://u.team/document/cli#generate)
 ## Installation
 @uteamjs/template is installed under the uteam cli node_modules folder.  Install the uteam cli automatically install the template.
 ```

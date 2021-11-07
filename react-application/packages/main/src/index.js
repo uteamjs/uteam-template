@@ -14,8 +14,8 @@ import { HashRouter as Router, NavLink } from 'react-router-dom'
 import { RouterStore, SwitchRoute } from '@uteamjs/react'
 import { FiMenu } from 'react-icons/fi'
 import { treeMenu } from "./treemenu"
-import { treeMenu } from "./treemenu"
 import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import './css/app.sass'
 
 // 1. Import generated packages

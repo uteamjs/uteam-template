@@ -1,0 +1,12 @@
+{
+  "name": "replace_name",
+  "version": "1.0.0",
+  "description": "@uteamjs/node package replace_name",
+  "keywords": [
+    "Package",
+    "Nodejs",
+    "API"
+  ],
+  "author": "u.team",
+  "license": "MIT"
+}
